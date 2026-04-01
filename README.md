@@ -69,7 +69,7 @@
 * **[Backup & Recovery Utility](https://github.com/Raffy01/Backup-Recovery)**
   * 재귀적 디렉토리 탐색(`scandir`), MD5 무결성 검증, 상호작용형 CLI(Tree 구조 시각화)를 통한 안전한 파일 백업/복구 시스템 구현
 
-### 4. ⚙데이터 파이프라인 및 자동화
+### 4. 데이터 파이프라인 및 자동화
 * **[C Feature Extraction Pipeline](https://github.com/Raffy01/C-Feature-Extraction-Pipeline)**
   * **Description:** C 소스 코드의 특징(CFG, 루프, 시스템 콜 등)을 병렬로 추출하는 자동화 파이프라인
   * **Tech:** Bash, Python, C, GCC Dumps, perf, strace
