@@ -79,7 +79,7 @@
   * **Key Contributions:**
     * 재귀적 디렉토리 탐색(`scandir`)과 MD5 해시 비교를 통해 동일 파일의 중복 백업을 원천 차단하여 스토리지 효율성 확보
     * 연결 리스트(Linked List) 기반의 백업 로그 메모리 관리 및 상호작용형 트리(Tree) 구조 UI를 구축하여 직관적인 상태 확인 지원
-### 4. ⚙️ 데이터 파이프라인 및 자동화
+### 4. 데이터 파이프라인 및 자동화
 * **[C Feature Extraction Pipeline](https://github.com/Raffy01/C-Feature-Extraction-Pipeline)**
   * **Description:** C 소스 코드의 특징 추출부터 CSV 데이터 병합까지 전 과정을 자동화한 **Bash 쉘 스크립트 파이프라인**
   * **Tech:** Bash, Python, C, GCC Dumps, perf, strace
