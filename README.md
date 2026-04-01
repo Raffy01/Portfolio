@@ -48,7 +48,7 @@
   * **Tech:** Kotlin, Coroutines, kotlinx.serialization
   * **Key Contributions:**
     * Kotlin Coroutines를 활용한 비동기 I/O 처리 및 직렬화/역직렬화 파이프라인 구축
-    * 멀티파트 파일(오디오, 이미지) 데이터의 안전한 스트림 전송 구현
+    * TLS 암호화 소켓(`SSLSocket`)을 기반으로, 4-Byte 길이 헤더와 JSON 페이로드 뒤에 Raw File Byte(오디오, 이미지)를 직접 Flush하는 커스텀 프로토콜을 구현하여 안전하고 손실 없는 스트림 전송 처리
 
 ### 2. 심화 네트워크 시스템 프로그래밍
 * **[Nettool: 멀티스레드 네트워크 스캐너](https://github.com/Raffy01/nettool)**
