@@ -60,22 +60,33 @@
     * TTL 및 TCP Window Size 분석을 통한 정밀한 타겟 OS 핑거프린팅 로직 작성
 
 ### 3. 리눅스 시스템 프로그래밍 스위트 (System Utilities)
-리눅스 커널과 POSIX API의 깊은 이해를 바탕으로, 파일 시스템 제어와 프로세스 관리를 다루는 유틸리티입니다.
-
+리눅스 커널과 POSIX API의 깊은 이해를 바탕으로, 파일 시스템 제어와 프로세스 생명주기를 다루는 3종의 로컬 유틸리티를 개발했습니다.
 * **[Local Version Control System (repo)](https://github.com/Raffy01/Version-Control)**
-  * `fork()`와 `execvp()`를 활용한 CLI 구축 및 LCS 알고리즘 기반의 파일 Diff 분석, 버전 커밋/롤백 구현
-* **[Background Directory Sync Daemon](https://github.com/Raffy01/Background-Synchronization-Daemon)**
-  * 터미널에서 분리된 백그라운드 데몬 프로세스 구현, MD5 해싱을 통한 실시간 파일 수정 감지 및 IPC(SIGUSR1) 제어
-* **[Backup & Recovery Utility](https://github.com/Raffy01/Backup-Recovery)**
-  * 재귀적 디렉토리 탐색(`scandir`), MD5 무결성 검증, 상호작용형 CLI(Tree 구조 시각화)를 통한 안전한 파일 백업/복구 시스템 구현
+  * **Description:** Git의 핵심 동작 원리를 C언어로 로컬 환경에 직접 구현한 경량 버전 관리 시스템
+  * **Key Contributions:**
+    * `fork()`와 `execvp()`를 활용한 다중 명령어 라우팅 및 인터랙티브 CLI 셸 구축
+    * LCS(Longest Common Subsequence) 알고리즘을 직접 구현하여 파일 간 삽입/삭제된 Diff를 줄(Line) 단위로 정밀하게 추출
+    * 대용량 소스 파일 파싱 시 `realloc`을 활용한 동적 메모리 스케일링으로 메모리 오버헤드 최적화
 
-### 4. 데이터 파이프라인 및 자동화
+* **[Background Directory Sync Daemon](https://github.com/Raffy01/Background-Synchronization-Daemon)**
+  * **Description:** 디렉토리 내 파일 수정 내역을 실시간으로 추적하고 자동 백업하는 데몬 유틸리티
+  * **Key Contributions:**
+    * `fork()`와 `execl()`을 통해 터미널 세션과 완전히 분리된 독립적인 백그라운드 프로세스의 생명주기 관리
+    * 폴링(Polling) 기반의 디렉토리 스캔과 OpenSSL MD5 해싱을 통해 변경점 감지 및 IPC(SIGUSR1)를 활용한 데몬 안전 종료 제어
+
+* **[Backup & Recovery Utility](https://github.com/Raffy01/Backup-Recovery)**
+  * **Description:** 데이터 무결성을 보장하며 파일 및 디렉토리를 안전하게 버전별로 관리하는 백업/복구 시스템
+  * **Key Contributions:**
+    * 재귀적 디렉토리 탐색(`scandir`)과 MD5 해시 비교를 통해 동일 파일의 중복 백업을 원천 차단하여 스토리지 효율성 확보
+    * 연결 리스트(Linked List) 기반의 백업 로그 메모리 관리 및 상호작용형 트리(Tree) 구조 UI를 구축하여 직관적인 상태 확인 지원
+### 4. ⚙️ 데이터 파이프라인 및 자동화
 * **[C Feature Extraction Pipeline](https://github.com/Raffy01/C-Feature-Extraction-Pipeline)**
-  * **Description:** C 소스 코드의 특징(CFG, 루프, 시스템 콜 등)을 병렬로 추출하는 자동화 파이프라인
+  * **Description:** C 소스 코드의 특징 추출부터 CSV 데이터 병합까지 전 과정을 자동화한 **Bash 쉘 스크립트 파이프라인**
   * **Tech:** Bash, Python, C, GCC Dumps, perf, strace
   * **Key Contributions:**
-    * `perf`와 `strace`를 연동하여 하드웨어 이벤트 및 시스템 콜 동적 추적
-    * 백그라운드 Job 제어(`wait`, `flock`)를 통한 멀티 프로세스 병렬 추출 최적화
+    * **Shell Scripting:** `grep`, `awk`, `sed` 등 GNU 유틸리티를 활용한 텍스트 파싱 및 로그 데이터 가공 스크립트 작성
+    * **Parallel Execution:** 백그라운드 Job 제어(`&`, `wait`)와 파일 락(`flock`)을 활용해 충돌 없는 멀티 프로세스 병렬 추출 스크립트 구현
+    * **Dynamic Profiling:** `perf`와 `strace`를 쉘 스크립트 내에 연동하여 하드웨어 이벤트 및 시스템 콜 동적 추적
 
 ---
 
