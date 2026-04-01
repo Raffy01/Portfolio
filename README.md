@@ -34,7 +34,7 @@
 ### 1. 네트워크 & 백엔드 아키텍처 (End-to-End & Cloud Ops)
 표준 HTTP 프레임워크에 의존하지 않고, 직접 보안 소켓 통신 규격을 설계하여 실제 클라우드 환경에서 운영한 풀스택 프로젝트입니다.
 
-* **[JJikEoVoCa Backend Server]([https://github.com/Raffy01/JJikEoVoCa-Server])**
+* **[JJikEoVoCa Backend Server](https://github.com/Raffy01/JJikEoVoCa-Server)**
   * **Description:** 영어 단어장 어플리케이션을 위한 멀티스레드 기반 TCP/IP 소켓 서버
   * **Tech:** Python, OpenSSL, SQLite, **AWS (EC2, Elastic IP)**, Google Gemini API, GCP Vision/STT
   * **Key Contributions:**
@@ -43,7 +43,7 @@
     * **Optimization:** Thread-safe한 SQLite Connection Pool 구현 및 음성 데이터(STT) in-memory 인코딩 파이프라인 구축
     * **AI Integration:** RAG(Retrieval-Augmented Generation) 기반 AI 챗봇 통합
 
-* **[JJikEoVoCa Android Network SDK]([https://github.com/Raffy01/JJikEoVoCa-Network-SDK])**
+* **[JJikEoVoCa Android Network SDK](https://github.com/Raffy01/JJikEoVoCa-Network-SDK)**
   * **Description:** 커스텀 TCP/IP 백엔드 서버와 통신하기 위한 Android 클라이언트 네트워크 계층
   * **Tech:** Kotlin, Coroutines, kotlinx.serialization
   * **Key Contributions:**
@@ -51,7 +51,7 @@
     * 멀티파트 파일(오디오, 이미지) 데이터의 안전한 스트림 전송 구현
 
 ### 2. 심화 네트워크 시스템 프로그래밍
-* **[Nettool: 멀티스레드 네트워크 스캐너]([https://github.com/Raffy01/nettool])**
+* **[Nettool: 멀티스레드 네트워크 스캐너](https://github.com/Raffy01/nettool)**
   * **Description:** OS 네트워크 레이어를 우회하여 IP/TCP 헤더를 직접 조작하는 C 기반 고속 네트워크 정찰 도구
   * **Tech:** C, Linux Raw Sockets, Pthreads
   * **Key Contributions:**
@@ -62,15 +62,15 @@
 ### 3. 리눅스 시스템 프로그래밍 스위트 (System Utilities)
 리눅스 커널과 POSIX API의 깊은 이해를 바탕으로, 파일 시스템 제어와 프로세스 관리를 다루는 유틸리티입니다.
 
-* **[Local Version Control System (repo)]([https://github.com/Raffy01/Version-Control])**
+* **[Local Version Control System (repo)](https://github.com/Raffy01/Version-Control)**
   * `fork()`와 `execvp()`를 활용한 CLI 구축 및 LCS 알고리즘 기반의 파일 Diff 분석, 버전 커밋/롤백 구현
-* **[Background Directory Sync Daemon]([https://github.com/Raffy01/Background-Synchronization-Daemon])**
+* **[Background Directory Sync Daemon](https://github.com/Raffy01/Background-Synchronization-Daemon)**
   * 터미널에서 분리된 백그라운드 데몬 프로세스 구현, MD5 해싱을 통한 실시간 파일 수정 감지 및 IPC(SIGUSR1) 제어
-* **[Backup & Recovery Utility]([https://github.com/Raffy01/Backup-Recovery])**
+* **[Backup & Recovery Utility](https://github.com/Raffy01/Backup-Recovery)**
   * 재귀적 디렉토리 탐색(`scandir`), MD5 무결성 검증, 상호작용형 CLI(Tree 구조 시각화)를 통한 안전한 파일 백업/복구 시스템 구현
 
 ### 4. ⚙데이터 파이프라인 및 자동화
-* **[C Feature Extraction Pipeline]([https://github.com/Raffy01/C-Feature-Extraction-Pipeline])**
+* **[C Feature Extraction Pipeline](https://github.com/Raffy01/C-Feature-Extraction-Pipeline)**
   * **Description:** C 소스 코드의 특징(CFG, 루프, 시스템 콜 등)을 병렬로 추출하는 자동화 파이프라인
   * **Tech:** Bash, Python, C, GCC Dumps, perf, strace
   * **Key Contributions:**
