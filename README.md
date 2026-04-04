@@ -57,7 +57,7 @@
   * **Key Contributions:**
     * POSIX Raw Socket을 활용한 ICMP Ping Sweep 및 Stealth TCP SYN Scan 구현
     * 비동기 패킷 송수신과 Pthreads를 통한 멀티스레딩으로 스캔 속도 극대화
-    * TTL 및 TCP Window Size 분석을 통한 정밀한 타겟 OS 핑거프린팅 로직 작성
+    * TTL 및 TCP Window Size 분석을 통한 타겟 OS 핑거프린팅 로직 작성
 
 ### 3. 리눅스 시스템 프로그래밍 스위트 (System Utilities)
 리눅스 커널과 POSIX API의 깊은 이해를 바탕으로, 파일 시스템 제어와 프로세스 생명주기를 다루는 3종의 로컬 유틸리티를 개발했습니다.
